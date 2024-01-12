@@ -82,9 +82,9 @@ print("[*] Initialize model successfully...")
 ###train_data
 train_low_data = []
 train_high_data = []
-train_low_data_names = glob('./LOLdataset/our485/low/*.png') 
+train_low_data_names = glob('/kaggle/input/seperate-dataset-for-right-format/puwell/train/low/*.png') 
 train_low_data_names.sort()
-train_high_data_names = glob('./LOLdataset/our485/high/*.png') 
+train_high_data_names = glob('/kaggle/input/seperate-dataset-for-right-format/puwell/train/high/*.png') 
 train_high_data_names.sort()
 assert len(train_low_data_names) == len(train_high_data_names)
 print('[*] Number of training data: %d' % len(train_low_data_names))
@@ -95,7 +95,7 @@ for idx in range(len(train_low_data_names)):
     train_high_data.append(high_im)
 
 eval_low_data = []
-eval_low_data_names = glob('./LOLdataset/eval15/low/*.png') 
+eval_low_data_names = glob('/kaggle/input/seperate-dataset-for-right-format/puwell/test/low/*.png') 
 eval_low_data_names.sort()
 for idx in range(len(eval_low_data_names)):
     eval_low_im = load_images(eval_low_data_names[idx])
